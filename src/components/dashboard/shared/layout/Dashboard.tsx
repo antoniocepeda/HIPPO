@@ -1,7 +1,7 @@
 import React from 'react';
-import { MetricsPanel } from './MetricsPanel';
-import { TrafficGraph } from './TrafficGraph';
-import { AdminNav } from './AdminNav';
+import { MetricsPanel } from "../../admin/metrics/MetricsPanel";
+import { TrafficGraph } from "../../admin/metrics/TrafficGraph";
+import { AdminNav } from "./AdminNav";
 
 export function Dashboard() {
   return (

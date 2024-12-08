@@ -1,13 +1,13 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Hero } from './components/Hero';
-import { QuestionForm } from './components/QuestionForm';
-import { TrustIndicators } from './components/TrustIndicators';
-import { Footer } from './components/Footer';
-import { AdminLogin } from './components/admin/AdminLogin';
-import { Dashboard } from './components/admin/Dashboard';
-import { ReviewQueue } from './components/admin/ReviewQueue';
-import { KnowledgeBase } from './components/admin/KnowledgeBase';
+import { Hero } from './components/layout/Hero';
+import { QuestionForm } from './components/forms/QuestionForm';
+import { TrustIndicators } from './components/common/TrustIndicators';
+import { Footer } from './components/layout/Footer';
+import { AdminLogin } from './components/dashboard/admin/auth/AdminLogin';
+import { Dashboard } from './components/dashboard/shared/layout/Dashboard';
+import { ReviewQueue } from './components/dashboard/admin/questions/ReviewQueue';
+import { KnowledgeBase } from './components/dashboard/admin/knowledge/KnowledgeBase';
 
 export default function App() {
   return (

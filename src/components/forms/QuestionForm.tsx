@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Send } from 'lucide-react';
-import { UserInfoModal } from './UserInfoModal';
-import { SuccessModal } from './SuccessModal';
+import { UserInfoModal } from "../modals/UserInfoModal";
+import { SuccessModal } from "../modals/SuccessModal";
 
 export function QuestionForm() {
   const [question, setQuestion] = useState('');
