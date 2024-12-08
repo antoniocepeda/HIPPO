@@ -25,8 +25,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - ROADMAP.md for development planning
   - ARCHITECTURE.md detailing system design
   - .env.example for environment configuration
-- GitHub Actions workflow for automated deployment to Firebase
-- Firebase hosting configuration
+- Deployment infrastructure:
+  - GitHub Actions workflow for automated deployment
+  - Firebase hosting configuration
+  - Continuous deployment on master branch
 
 ### Planned
 - Abstract Modal system into reusable components

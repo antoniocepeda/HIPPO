@@ -72,7 +72,8 @@ Example:
 ### Deployment and CI/CD
 - [ ] Implement continuous deployment pipeline
     - [x] Set up GitHub Actions workflow for automated deployment
-    - [x] Configure Firebase hosting
+    - [x] Configure Firebase hosting and deployment
+    - [x] Set up project secrets and environment variables
     - [ ] Add staging environment
     - [ ] Set up deployment previews for pull requests
 - [ ] Enhance deployment quality and monitoring
