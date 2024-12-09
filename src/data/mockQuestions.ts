@@ -1,4 +1,4 @@
-import { Question, LabCategory } from '../types/question';
+import { Question, LabCategory } from '../shared/types/question';
 
 function generateQuestionNumber(id: number): string {
   return `Q${String(id).padStart(6, '0')}`;

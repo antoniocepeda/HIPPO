@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { AdminNav } from "@/components/dashboard/shared/layout/AdminNav";
+import { AdminNav } from "../../../../../shared/components/layout/AdminNav";
 import { KnowledgeBaseHeader } from './KnowledgeBaseHeader';
-import { KnowledgeCard } from "@/components/dashboard/shared/knowledge/KnowledgeCard";
-import { KnowledgeListItem } from "@/components/dashboard/shared/knowledge/KnowledgeListItem";
-import { mockKnowledgeBase } from "@/data/mockKnowledgeBase";
-import { LabCategory } from "@/types/question";
+import { KnowledgeCard } from "../../../../../shared/components/knowledge/KnowledgeCard";
+import { KnowledgeListItem } from "../../../../../shared/components/knowledge/KnowledgeListItem";
+import { mockKnowledgeBase } from "../../../../../data/mockKnowledgeBase";
+import { LabCategory } from "../../../../../shared/types/question";
 
 const labCategories: LabCategory[] = [
   'Microbiology',

@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { AdminNav } from "@/components/dashboard/shared/layout/AdminNav";
-import { Question, LabCategory } from "@/types/question";
+import { AdminNav } from "../../../../../shared/components/layout/AdminNav";
+import { Question, LabCategory } from "../../../../../shared/types/question";
 import { ReviewQueueHeader } from './ReviewQueueHeader';
-import { needsReviewQuestions } from "@/data/mockQuestions";
-import { QuestionCard } from "@/components/dashboard/shared/questions/QuestionCard";
-import { QuestionListItem } from "@/components/dashboard/shared/questions/QuestionListItem";
+import { needsReviewQuestions } from "../../../../../data/mockQuestions";
+import { QuestionCard } from "../../../../../shared/components/questions/QuestionCard";
+import { QuestionListItem } from "../../../../../shared/components/questions/QuestionListItem";
 
 const labCategories: LabCategory[] = [
   'Microbiology',

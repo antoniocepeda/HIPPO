@@ -1,4 +1,4 @@
-import { KnowledgeEntry } from '../types/knowledge';
+import { KnowledgeEntry } from '../shared/types/knowledge';
 
 export const mockKnowledgeBase: KnowledgeEntry[] = [
   {

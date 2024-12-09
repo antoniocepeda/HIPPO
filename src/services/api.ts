@@ -1,5 +1,5 @@
-import { Question } from '../types/question';
-import { KnowledgeEntry } from '../types/knowledge';
+import { Question } from '../shared/types/question';
+import { KnowledgeEntry } from '../shared/types/knowledge';
 
 export interface ApiResponse<T> {
   data: T;

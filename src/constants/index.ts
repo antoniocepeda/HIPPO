@@ -1,4 +1,4 @@
-import { LabCategory } from '../types/question';
+import { LabCategory } from '../shared/types/question';
 
 export const LAB_CATEGORIES: LabCategory[] = [
   'Microbiology',
