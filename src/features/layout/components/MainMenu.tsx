@@ -6,6 +6,9 @@ import { useLocation, Link } from 'react-router-dom';
 
 const navigation = [
   { name: 'Home', href: '/' },
+  { name: 'Dashboard', href: '/admin/dashboard' },
+  { name: 'Review Queue', href: '/admin/review' },
+  { name: 'Knowledge Base', href: '/admin/knowledge-base' },
   { name: 'Admin Login', href: '/admin/login' },
 ];
 
