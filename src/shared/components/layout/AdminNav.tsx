@@ -6,6 +6,11 @@ export function AdminNav() {
   const navigate = useNavigate();
   const location = useLocation();
   
+  const handleLogout = () => {
+    // Add any logout logic here (clear tokens, state, etc.)
+    navigate('/');
+  };
+  
   return (
     <nav className="bg-white border-b border-primary-100">
       <div className="max-w-7xl mx-auto px-4 py-4">
@@ -46,7 +51,7 @@ export function AdminNav() {
             </button>
           </div>
           <button 
-            onClick={() => navigate('/admin/login')}
+            onClick={handleLogout}
             className="flex items-center gap-2 text-primary-600 hover:text-primary-800"
           >
             <LogOut className="w-5 h-5" />
