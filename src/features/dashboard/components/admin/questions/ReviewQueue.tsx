@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import { AdminNav } from "../../../../../shared/components/layout/AdminNav";
 import { Question, LabCategory } from "../../../../../shared/types/question";
 import { ReviewQueueHeader } from './ReviewQueueHeader';
 import { needsReviewQuestions } from "../../../../../data/mockQuestions";
-import { QuestionCard } from "../../../../../shared/components/questions/QuestionCard";
 import { QuestionListItem } from "../../../../../shared/components/questions/QuestionListItem";
+import { ContentCard } from "../../../../../shared/components/content/ContentCard";
 
 const labCategories: LabCategory[] = [
   'Microbiology',
@@ -41,8 +40,7 @@ export function ReviewQueue() {
   });
 
   return (
-    <div className="min-h-screen bg-primary-50">
-      <AdminNav />
+    <div className="min-h-screen bg-primary-50 dark:bg-primary-900">
       <ReviewQueueHeader
         searchQuery={searchQuery}
         setSearchQuery={setSearchQuery}
@@ -59,7 +57,14 @@ export function ReviewQueue() {
         <div className={viewMode === 'grid' ? 'grid gap-6' : 'space-y-2'}>
           {sortedQuestions.map((question) => (
             viewMode === 'grid' ? (
-              <QuestionCard key={question.id} question={question} />
+              <ContentCard
+                key={question.id}
+                item={question}
+                variant="question"
+                onPrimaryAction={() => console.log('Approve:', question.id)}
+                onSecondaryAction={() => console.log('Reject:', question.id)}
+                onNotesChange={(notes) => console.log('Notes:', notes)}
+              />
             ) : (
               <QuestionListItem key={question.id} question={question} />
             )

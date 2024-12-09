@@ -114,27 +114,29 @@ export function TrafficGraph() {
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-sm p-4 sm:p-6 mt-8 w-full overflow-hidden">
-      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
-        <h2 className="text-lg font-semibold text-primary-900">Question Traffic</h2>
-        <div className="flex flex-wrap gap-2">
-          {(['day', 'week', 'month', 'year'] as const).map((range) => (
-            <button
-              key={range}
-              onClick={() => setTimeRange(range)}
-              className={`px-3 py-1.5 text-sm rounded-md transition-colors ${
-                timeRange === range
-                  ? 'bg-primary-100 text-primary-800'
-                  : 'text-primary-600 hover:bg-primary-50'
-              }`}
-            >
-              {range.charAt(0).toUpperCase() + range.slice(1)}
-            </button>
-          ))}
+    <div className="bg-white dark:bg-primary-800/30 rounded-lg shadow-sm p-6">
+      <div className="flex flex-col gap-4">
+        <div className="flex justify-between items-center">
+          <h3 className="text-lg font-semibold text-primary-900 dark:text-primary-100">Question Traffic</h3>
+          <div className="flex gap-2">
+            {(['day', 'week', 'month', 'year'] as const).map((range) => (
+              <button
+                key={range}
+                onClick={() => setTimeRange(range)}
+                className={`px-3 py-1 text-sm rounded-md ${
+                  timeRange === range
+                    ? 'bg-primary-100 dark:bg-primary-700 text-primary-700 dark:text-primary-300'
+                    : 'hover:bg-primary-100 dark:hover:bg-primary-700 text-primary-600 dark:text-primary-400'
+                }`}
+              >
+                {range.charAt(0).toUpperCase() + range.slice(1)}
+              </button>
+            ))}
+          </div>
         </div>
-      </div>
-      <div className="h-[300px] sm:h-[400px] w-full">
-        <Line options={options} data={data} />
+        <div className="h-[300px] sm:h-[400px] w-full">
+          <Line options={options} data={data} />
+        </div>
       </div>
     </div>
   );

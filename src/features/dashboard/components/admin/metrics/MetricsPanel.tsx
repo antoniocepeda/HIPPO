@@ -104,13 +104,13 @@ function MetricCard({
   const getCategoryColors = (category: string) => {
     switch (category) {
       case 'ai':
-        return 'bg-blue-50 border-blue-100';
+        return 'bg-blue-50 dark:bg-blue-900/30 border-blue-100 dark:border-blue-700';
       case 'questions':
-        return 'bg-purple-50 border-purple-100';
+        return 'bg-purple-50 dark:bg-purple-900/30 border-purple-100 dark:border-purple-700';
       case 'users':
-        return 'bg-green-50 border-green-100';
+        return 'bg-green-50 dark:bg-green-900/30 border-green-100 dark:border-green-700';
       default:
-        return 'bg-white border-primary-100';
+        return 'bg-white dark:bg-primary-800/30 border-primary-100 dark:border-primary-700';
     }
   };
 
@@ -120,20 +120,20 @@ function MetricCard({
   return (
     <div className={`rounded-lg border p-4 sm:p-6 ${getCategoryColors(category)}`}>
       <div className="flex items-center gap-4 mb-4">
-        <div className="text-primary-600">{icon}</div>
+        <div className="text-primary-600 dark:text-primary-300">{icon}</div>
         <div>
-          <p className="text-sm text-primary-600">{title}</p>
-          <p className="text-xl sm:text-2xl font-bold text-primary-900">{value}</p>
+          <p className="text-sm text-primary-600 dark:text-primary-300">{title}</p>
+          <p className="text-xl sm:text-2xl font-bold text-primary-900 dark:text-primary-100">{value}</p>
         </div>
       </div>
       <div className="flex items-center justify-between">
-        <p className="text-sm text-primary-600">{description}</p>
+        <p className="text-sm text-primary-600 dark:text-primary-400">{description}</p>
         <span className={`text-sm ${
           isNeutralTrend 
-            ? 'text-primary-600'
+            ? 'text-primary-600 dark:text-primary-400'
             : isPositiveTrend 
-              ? 'text-green-600' 
-              : 'text-red-600'
+              ? 'text-green-600 dark:text-green-400' 
+              : 'text-red-600 dark:text-red-400'
         }`}>
           {trend}
         </span>

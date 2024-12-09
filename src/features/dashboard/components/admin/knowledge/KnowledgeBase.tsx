@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import { AdminNav } from "../../../../../shared/components/layout/AdminNav";
 import { KnowledgeBaseHeader } from './KnowledgeBaseHeader';
-import { KnowledgeCard } from "../../../../../shared/components/knowledge/KnowledgeCard";
+import { ContentCard } from "../../../../../shared/components/content/ContentCard";
 import { KnowledgeListItem } from "../../../../../shared/components/knowledge/KnowledgeListItem";
 import { mockKnowledgeBase } from "../../../../../data/mockKnowledgeBase";
 import { LabCategory } from "../../../../../shared/types/question";
@@ -33,8 +32,7 @@ export function KnowledgeBase() {
   });
 
   return (
-    <div className="min-h-screen bg-primary-50">
-      <AdminNav />
+    <div className="min-h-screen bg-primary-50 dark:bg-primary-900">
       <KnowledgeBaseHeader
         searchQuery={searchQuery}
         setSearchQuery={setSearchQuery}
@@ -51,7 +49,13 @@ export function KnowledgeBase() {
         <div className={viewMode === 'grid' ? 'grid gap-6' : 'space-y-2'}>
           {sortedEntries.map((entry) => (
             viewMode === 'grid' ? (
-              <KnowledgeCard key={entry.id} entry={entry} />
+              <ContentCard
+                key={entry.id}
+                item={entry}
+                variant="knowledge"
+                onPrimaryAction={() => console.log('Edit:', entry.id)}
+                onSecondaryAction={() => console.log('Delete:', entry.id)}
+              />
             ) : (
               <KnowledgeListItem key={entry.id} entry={entry} />
             )

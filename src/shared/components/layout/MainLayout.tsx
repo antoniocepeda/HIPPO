@@ -9,9 +9,11 @@ interface MainLayoutProps {
 
 export function MainLayout({ children, className = '' }: MainLayoutProps) {
   return (
-    <div className={`min-h-screen bg-gradient-to-b from-primary-50 to-white dark:from-primary-900 dark:to-primary-800 flex flex-col ${className}`}>
+    <div className={`h-screen bg-primary-50 dark:bg-primary-900 flex flex-col ${className}`}>
       <Header />
-      {children}
+      <main className="flex-1 overflow-auto">
+        {children}
+      </main>
       <Footer />
     </div>
   );
